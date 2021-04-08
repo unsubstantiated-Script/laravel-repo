@@ -6,16 +6,28 @@ class PagesController extends Controller
 {
     public function index()
     {
-        return view('pages.index');
+        $title = 'Welcome to Laravel';
+        //Two ways of passing this variable
+        // return view('pages.index', compact('title'));
+        //This allows you to pass multiple values as an array...
+        return view('pages.index')->with('title', $title);
     }
 
     public function about()
     {
-        return view('pages.about');
+        $title = 'About Us';
+
+        return view('pages.about')->with('title', $title);
     }
 
     public function services()
     {
-        return view('pages.services');
+        //Passing multiple values
+
+        $data = array(
+            'title' => 'Services',
+            'services' => ['Web Design', 'Programming', 'SEO'],
+        );
+        return view('pages.services')->with($data);
     }
 }
