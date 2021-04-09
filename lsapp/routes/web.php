@@ -23,5 +23,8 @@ Route::get('/about', [PagesController::class, 'about']);
 Route::get('/services', [PagesController::class, 'services']);
 
 // Route::get('/about', function () {
-//     return view('pages.about');
+//     return view('pages.about');+
 // });
+
+//Modern Laravel 8 Use
+Route::resource('posts', 'App\Http\Controllers\PostsController');
