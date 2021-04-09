@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand" href="/">{{config('app.name', 'LSAPP')}}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,6 +17,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link " aria-current="page" href="/posts">Blog</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link "  aria-current="page" href="/posts/create">Create Post</a>
         </li>
       </ul>
     </div>

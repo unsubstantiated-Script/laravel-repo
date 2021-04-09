@@ -5,7 +5,8 @@
     <h1>{{$post->title}}</h1>
   
    <div>
-       {{$post->body}}
+       {{-- This will allow things to parse the HTML being sent from the CKEditor --}}
+       {!!$post->body!!}
    </div> 
    <hr>
    <small>Written on {{$post->created_at}}</small>
