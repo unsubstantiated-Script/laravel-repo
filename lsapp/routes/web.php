@@ -28,3 +28,6 @@ Route::get('/services', [PagesController::class, 'services']);
 
 //Modern Laravel 8 Use
 Route::resource('posts', 'App\Http\Controllers\PostsController');
+Auth::routes();
+
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
